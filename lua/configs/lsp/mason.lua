@@ -4,6 +4,7 @@ local servers = {
 	"jsonls",
 	"tsserver",
 	"eslint",
+  "tailwindcss"
 }
 
 local settings = {
