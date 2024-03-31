@@ -6,10 +6,10 @@ if not status_ok then
   return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
+-- local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+-- if not config_status_ok then
+--   return
+-- end
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -118,10 +118,11 @@ nvim_tree.setup {
   },
   view = {
     width = 30,
-    hide_root_folder = false,
     side = "left",
     number = false,
     relativenumber = false,
+    preserve_window_proportions = true,
+    adaptive_size = false,
   },
   actions = {
     open_file = {
@@ -142,15 +143,15 @@ nvim_tree.setup {
         git = false,
       },
       glyphs = {
-        default = "",
+        default = "󰈚",
         symlink = "",
         folder = {
-          default = "",
-          empty = "",
-          empty_open = "",
+          default = "",
+          empty = "",
+          empty_open = "",
           open = "",
-          symlink = "",
-          symlink_open = "",
+          symlink = "",
+          symlink_open = "",
           arrow_open = "",
           arrow_closed = "",
         },

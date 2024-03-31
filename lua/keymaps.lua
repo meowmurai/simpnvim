@@ -79,7 +79,7 @@ keymap(
 keymap("n", "<leader>fw", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opts)
 -- Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>e", ":lua require('nvim-tree.api').tree.toggle()<cr>", opts)
 
 -- BufferLine
 keymap("n", "<leader>x", ":Bdelete<cr>", opts)
